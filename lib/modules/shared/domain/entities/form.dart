@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:maisdata/modules/shared/domain/entities/field.dart';
 
 class Form {
@@ -5,5 +6,14 @@ class Form {
   final String name;
   final List<Field> fields;
 
-  Form({this.id, this.name, this.fields});
+  Form({
+    this.id,
+    @required this.name,
+    @required this.fields,
+  });
+
+  @override
+  String toString() {
+    return '$name';
+  }
 }
